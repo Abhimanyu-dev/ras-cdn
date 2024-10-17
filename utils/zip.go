@@ -20,7 +20,7 @@ func appendFiles(filename string, zipw *zip.Writer) error {
 	}
 	defer file.Close()
 
-	wr, err := zipw.Create(filename)
+	wr, err := zipw.Create(GetRollNo(filename))
 	if err != nil {
 		return err
 	}

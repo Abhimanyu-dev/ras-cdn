@@ -12,3 +12,9 @@ func GenerateName(uuid, filename, rid string) string {
 
 	return strings.Join(parts, ".")
 }
+
+func GetRollNo(filename string) string {
+	parts := strings.Split(filename, "_")
+	newFileName := parts[2] + ".pdf"
+	return newFileName
+}
